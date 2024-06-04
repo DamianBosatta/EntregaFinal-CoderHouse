@@ -1,0 +1,76 @@
+// Media queries para el header
+@media (max-width: 575.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+
+    .nav-item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar-nav {
+    flex-direction: row;
+    text-align: left;
+
+    .nav-item {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Media queries para el footer
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-width: $navbar-brand-img-max-width-small;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar-nav {
+    flex-direction: row;
+    text-align: left;
+  }
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .text-bg-primary {
+      font-size: 1.2rem;
+  }
+  .h3 {
+      margin-bottom: 10px;
+  }
+  .lead {
+      margin-bottom: 20px;
+      line-height: 1.5;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-width: 30px; // Reducir tamaño del logo en pantallas pequeñas si es necesario
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+      grid-template-columns: 1fr;
+  }
+  .title, .image, .course-list {
+      grid-column: span 1;
+  }
+}

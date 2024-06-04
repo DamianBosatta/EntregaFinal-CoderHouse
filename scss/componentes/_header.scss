@@ -1,0 +1,15 @@
+// Estilos del Navbar
+.navbar {
+    background-color: $primary-color !important; 
+    color: $text-color;
+    width: 100% !important; 
+    
+  
+    &-toggler {
+      border: none;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  }
