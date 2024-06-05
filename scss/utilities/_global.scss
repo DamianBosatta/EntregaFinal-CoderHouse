@@ -1,11 +1,9 @@
 
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    background-color: $background-color !important;
+    background-color: $background-color;
   }
   
   .wrapper {
@@ -13,19 +11,17 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     align-items: center ;
+   
   }
   body {
     display: flex;
     flex-direction: column;
     
-    margin: 0 !important;
-    padding: 0 !important;
 }
   
   main {
     flex: 1;
-    margin: 0 !important; /* Elimina cualquier margen */
-    padding: 0 !important; /* Elimina cualquier padding */
+   
     
   }
   .bg-custom {

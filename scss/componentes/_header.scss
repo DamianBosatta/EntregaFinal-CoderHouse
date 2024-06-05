@@ -1,6 +1,7 @@
 // Estilos del Navbar
+
 .navbar {
-    background-color: $primary-color !important; 
+    background-color: $primary-color; 
     color: $text-color;
     width: 100% !important; 
     
@@ -12,4 +13,25 @@
         outline: none;
       }
     }
+  }
+  header {
+    transition: background-color 0.5s ease !important;
+  }
+  
+  header:hover {
+    background-color: #ff0000 !important; /* Cambiar al color deseado al pasar el ratón */
+  }
+  header .navbar-brand img {
+    transition: transform 0.3s ease !important;
+  }
+  
+  header .navbar-brand img:hover {
+    transform: scale(1.1); /* Cambiar el tamaño del logo al hacer hover */
+  }
+  header .navbar-toggler {
+    transition: transform 0.3s ease;
+  }
+  
+  header .navbar-toggler:focus {
+    transform: rotate(90deg); /* Rotar el icono al enfocarse */
   }
