@@ -10,9 +10,9 @@
 
 .project-title h1 {
     font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #000000 !important;
-    background-color: $primary-color !important; 
+    font-family: $text-titulos;
+    color: $text-color;
+    background-color: $primary-color; 
     padding: 20px;
     border-radius: 10px;
     text-transform: uppercase;
@@ -25,15 +25,15 @@
 }
 
 .text-box {
-    background-color: $primary-color !important; ;
+    background-color: $primary-color !important; 
     padding: 20px;
     text-align: center;
     margin-bottom: 40px;
 }
 
 .text-bg-primary {
-    background-color: $primary-color !important; ;
-    color: #ffffff;
+    background-color: $primary-color !important; 
+    color: $text-color-secundary;
     padding: 20px;
     border-radius: 10px;
     height: 100%;

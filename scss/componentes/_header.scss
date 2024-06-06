@@ -1,37 +1,54 @@
-// Estilos del Navbar
-
 .navbar {
-    background-color: $primary-color; 
-    color: $text-color;
-    width: 100% !important; 
-    
-  
-    &-toggler {
-      border: none;
-  
-      &:focus {
-        outline: none;
-      }
+  background-color: $primary-color; 
+  color: $text-color;
+  width: 100% !important; 
+
+  &-toggler {
+    border: none;
+
+    &:focus {
+      outline: none;
     }
   }
-  header {
-    transition: background-color 0.5s ease !important;
+}
+
+header {
+ 
+  .navbar-nav .nav-link {
+    transition: transform 0.3s ease, color 0.3s ease; /* Agregar transición de color */
+    color: $text-color; /* Asegurarse de que el color de texto sea el correcto */
+
+    &:hover {
+      transform: scale(1.1) rotate(5deg); /* Cambiar tamaño y girar al hacer hover */
+      color: darken($text-color, 20%); /* Oscurecer ligeramente el color del texto */
+    }
   }
-  
-  header:hover {
-    background-color: #ff0000 !important; /* Cambiar al color deseado al pasar el ratón */
-  }
-  header .navbar-brand img {
-    transition: transform 0.3s ease !important;
-  }
-  
-  header .navbar-brand img:hover {
-    transform: scale(1.1); /* Cambiar el tamaño del logo al hacer hover */
-  }
-  header .navbar-toggler {
+
+  /* Agregar animación de deslizamiento lateral al hacer hover sobre el contenedor de la barra de navegación */
+  .navbar-collapse {
     transition: transform 0.3s ease;
+    transform: translateX(0); /* Mantener la barra de navegación en su posición inicial */
+
+    &:hover {
+      transform: translateX(10px); /* Deslizar la barra de navegación ligeramente hacia la derecha */
+    }
+  }
+ 
+  .navbar-brand img {
+    transition: transform 0.3s ease !important;
+
+    &:hover {
+      transform: scale(1.1); /* Cambiar el tamaño del logo al hacer hover */
+    }
+    
+  }
+
+  .navbar-toggler {
+    transition: transform 0.3s ease;
+
+    &:focus {
+      transform: rotate(90deg); /* Rotar el icono al enfocarse */
+    }
   }
   
-  header .navbar-toggler:focus {
-    transform: rotate(90deg); /* Rotar el icono al enfocarse */
-  }
+}
