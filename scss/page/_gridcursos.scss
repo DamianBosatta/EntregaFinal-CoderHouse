@@ -1,37 +1,59 @@
+.content {
+    display: grid; // Utiliza CSS Grid para el diseño del contenedor
+    grid-template-columns: 1fr 1fr; // Define dos columnas de igual tamaño
+    grid-template-rows: auto; // Define las filas con altura automática
+    gap: 20px; // Establece un espacio de 20px entre los elementos de la grid
+    padding: 20px; // Añade un padding de 20px alrededor del contenedor
+    text-align: center !important; // Centra horizontalmente el contenido, usando !important para asegurar que se aplique
+}
 
+.title {
+    grid-column: span 2; // Hace que el título abarque las dos columnas de la grid
+    text-align: center !important; // Centra el texto del título, usando !important para asegurar que se aplique
+    border: 1px solid $primary-color; // Añade un borde azul alrededor del título
+    padding: 10px; // Añade un padding de 10px al título
+    transition: background-color 0.3s, color 0.3s; // Añade transiciones suaves para los cambios de color de fondo y texto
+    color: $text-color-secundary; // Establece el color del texto del título a blanco
+    margin-bottom: 10px; // Añade un margen inferior de 10px al título
+}
+
+.title:hover {
+    background-color: $primary-color; // Cambia el color de fondo del título al pasar el mouse
+    color: $text-color; // Cambia el color del texto del título al pasar el mouse
+}
+
+.image {
+    grid-column: span 1; // Hace que el contenedor de la imagen abarque una columna de la grid
+}
 .course-list {
-    grid-column: span 1;
-    display: flex;
-    flex-direction: column;
-    color:$text-color-secundary;
+    grid-column: span 1; // Hace que el contenedor abarque una columna en una grid
+    display: flex; // Utiliza flexbox para el diseño del contenedor
+    flex-direction: column; // Organiza los elementos internos en una columna
+    color: $text-color-secundary; // Establece el color del texto usando una variable de color secundaria
 }
 
 .course-list ul {
-    flex-grow: 1;
-    border: none;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+    flex-grow: 1; // Permite que la lista crezca para llenar el espacio disponible
+    border: none; // Elimina cualquier borde predeterminado
+    list-style-type: none; // Elimina los estilos de lista predeterminados
 }
 
 .course-list li {
-    padding: 10px;
-    border-bottom: 1px solid $primary-color !important; 
-    transition: background-color 0.3s;
+    padding: 10px; // Añade padding de 10px a cada elemento de la lista
+    border-bottom: 1px solid $primary-color !important; // Añade un borde inferior con color primario, usando !important para asegurar que se aplique
+    transition: background-color 0.3s; // Añade una transición suave para el cambio de color de fondo
 }
 
 .course-list li:last-child {
-    border-bottom: none;
+    border-bottom: none; // Elimina el borde inferior del último elemento de la lista
 }
 
 .course-list li:hover {
-    background-color: $primary-color !important; ;
+    background-color: $primary-color !important; // Cambia el color de fondo al color primario al pasar el mouse, usando !important para asegurar que se aplique
 }
 
 .image img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
+    max-width: 100%; // Establece el ancho máximo de la imagen al 100% del contenedor
+    height: auto; // Mantiene la proporción de la imagen al ajustar la altura automáticamente
+    border: 1px solid $secondary-color; // Añade un borde gris claro a la imagen
 }
-
-

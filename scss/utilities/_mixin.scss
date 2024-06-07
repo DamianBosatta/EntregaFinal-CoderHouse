@@ -1,9 +1,11 @@
+// Mixin para agregar transiciones
 @mixin transition($property, $duration) {
-    transition: $property $duration ease;
-  }
-  
-  @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  transition: $property $duration ease; // Agrega una transición con la propiedad y duración especificadas
+}
+
+// Mixin para centrar elementos con flexbox
+@mixin flex-center {
+  display: flex; // Utiliza flexbox para el diseño
+  justify-content: center; // Centra horizontalmente los elementos
+  align-items: center; // Centra verticalmente los elementos
+}

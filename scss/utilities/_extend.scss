@@ -1,8 +1,10 @@
+// Placeholder para centrar el texto
 %center-text {
-    text-align: center;
-  }
-  
-  %no-margin-padding {
-    margin: 0;
-    padding: 0;
-  }
+  text-align: center; // Centra el texto horizontalmente
+}
+
+// Placeholder para eliminar márgenes y rellenos
+%no-margin-padding {
+  margin: 0; // Elimina los márgenes
+  padding: 0; // Elimina el relleno
+}

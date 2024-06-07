@@ -1,5 +1,5 @@
+// Aplica el placeholder %no-margin-padding a todos los elementos
 * {
-    padding: 0 ;
-    margin: 0 ;
-    box-sizing: border-box;
+    @extend %no-margin-padding; // Extiende el placeholder %no-margin-padding para eliminar márgenes y rellenos
+    box-sizing: border-box; // Establece el modelo de caja para incluir el borde en el tamaño total
 }

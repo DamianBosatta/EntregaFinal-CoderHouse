@@ -1,75 +1,134 @@
 .custom-background {
-    background-color: $primary-color !important; 
-    padding: 20px;
-    border-radius: 8px;
+    background-color: $primary-color !important; // Establece el color de fondo usando una variable de color y !important para asegurar que se aplique
+    padding: 20px; // Añade un padding de 20px alrededor del contenedor
+    border-radius: 8px; // Añade un borde redondeado de 8px
 }
 
 .project-title {
-    margin-bottom: 30px;
+    margin-bottom: 30px; // Añade un margen inferior de 30px
 }
 
 .project-title h1 {
-    font-size: 3rem;
-    font-family: $text-titulos;
-    color: $text-color;
-    background-color: $primary-color; 
-    padding: 20px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: background-color 0.3s ease;
+    font-size: 3rem; // Establece el tamaño de fuente a 3rem
+    font-family: $text-titulos; // Utiliza la fuente especificada en la variable $text-titulos
+    color: $text-color; // Establece el color del texto usando una variable de color
+    background-color: $primary-color; // Establece el color de fondo usando una variable de color
+    padding: 20px; // Añade un padding de 20px alrededor del título
+    border-radius: 10px; // Añade un borde redondeado de 10px
+    text-transform: uppercase; // Convierte el texto a mayúsculas
+    letter-spacing: 2px; // Añade un espaciado entre letras de 2px
+    transition: background-color 0.3s ease; // Añade una transición suave para el cambio de color de fondo
 }
 
 .project-title:hover {
-    background-color: $primary-color !important; ;
+    background-color: $primary-color !important; // Asegura que el color de fondo permanezca constante al pasar el mouse, usando !important
 }
 
 .text-box {
-    background-color: $primary-color !important; 
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 40px;
+    background-color: $primary-color !important; // Establece el color de fondo usando una variable de color y !important para asegurar que se aplique
+    padding: 20px; // Añade un padding de 20px alrededor del contenedor
+    text-align: center; // Centra el texto
+    margin-bottom: 40px; // Añade un margen inferior de 40px
 }
 
 .text-bg-primary {
-    background-color: $primary-color !important; 
-    color: $text-color-secundary;
-    padding: 20px;
-    border-radius: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: $primary-color !important; // Establece el color de fondo usando una variable de color y !important para asegurar que se aplique
+    color: $text-color-secundary; // Establece el color del texto usando una variable de color secundaria
+    padding: 20px; // Añade un padding de 20px alrededor del contenedor
+    border-radius: 10px; // Añade un borde redondeado de 10px
+    height: 100%; // Hace que el contenedor ocupe el 100% de la altura disponible
+    display: flex; // Utiliza flexbox para el diseño del contenedor
+    flex-direction: column; // Organiza los elementos internos en una columna
+    justify-content: center; // Centra los elementos internos verticalmente
 }
 
-
-
-
-
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-    padding: 20px;
-    text-align: center !important; // Agregar esta línea para centrar horizontalmente el contenido
+.bounce-top {
+    -webkit-animation: bounce-top 0.9s both; // Aplica la animación de rebote hacia arriba con una duración de 0.9s en navegadores Webkit
+    animation: bounce-top 0.9s both; // Aplica la animación de rebote hacia arriba con una duración de 0.9s
 }
 
-.title {
-    grid-column: span 2;
-    text-align: center !important;
-    border: 1px solid #3399ff;
-    padding: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    color: #fff;
-    margin-bottom: 10px;
+@-webkit-keyframes bounce-top {
+    0% {
+        -webkit-transform: translateY(-45px); // Inicia la animación con una traslación hacia arriba de 45px en navegadores Webkit
+        transform: translateY(-45px); // Inicia la animación con una traslación hacia arriba de 45px
+        -webkit-animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in' en navegadores Webkit
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+        opacity: 1; // Establece la opacidad inicial a 1
+    }
+    24% {
+        opacity: 1; // Mantiene la opacidad a 1 al 24% del tiempo de la animación
+    }
+    40% {
+        -webkit-transform: translateY(-24px); // Cambia la traslación hacia arriba a 24px en navegadores Webkit
+        transform: translateY(-24px); // Cambia la traslación hacia arriba a 24px
+        -webkit-animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in' en navegadores Webkit
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    65% {
+        -webkit-transform: translateY(-12px); // Cambia la traslación hacia arriba a 12px en navegadores Webkit
+        transform: translateY(-12px); // Cambia la traslación hacia arriba a 12px
+        -webkit-animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in' en navegadores Webkit
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    82% {
+        -webkit-transform: translateY(-6px); // Cambia la traslación hacia arriba a 6px en navegadores Webkit
+        transform: translateY(-6px); // Cambia la traslación hacia arriba a 6px
+        -webkit-animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in' en navegadores Webkit
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    93% {
+        -webkit-transform: translateY(-4px); // Cambia la traslación hacia arriba a 4px en navegadores Webkit
+        transform: translateY(-4px); // Cambia la traslación hacia arriba a 4px
+        -webkit-animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in' en navegadores Webkit
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    25%, 55%, 75%, 87% {
+        -webkit-transform: translateY(0px); // Restablece la traslación a 0px en estos porcentajes de tiempo en navegadores Webkit
+        transform: translateY(0px); // Restablece la traslación a 0px en estos porcentajes de tiempo
+        -webkit-animation-timing-function: ease-out; // Aplica una función de tiempo de animación 'ease-out' en navegadores Webkit
+        animation-timing-function: ease-out; // Aplica una función de tiempo de animación 'ease-out'
+    }
+    100% {
+        -webkit-transform: translateY(0px); // Restablece la traslación a 0px en navegadores Webkit
+        transform: translateY(0px); // Restablece la traslación a 0px
+        -webkit-animation-timing-function: ease-out; // Aplica una función de tiempo de animación 'ease-out' en navegadores Webkit
+        animation-timing-function: ease-out; // Aplica una función de tiempo de animación 'ease-out'
+        opacity: 1; // Mantiene la opacidad a 1
+    }
 }
 
-.title:hover {
-    background-color: #3399ff;
-    color: #333;
-}
-
-.image {
-    grid-column: span 1;
-}
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px); // Inicia la animación con una traslación hacia arriba de 45px
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+        opacity: 1; // Establece la opacidad inicial a 1
+    }
+    24% {
+        opacity: 1; // Mantiene la opacidad a 1 al 24% del tiempo de la animación
+    }
+    40% {
+        transform: translateY(-24px); // Cambia la traslación hacia arriba a 24px
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    65% {
+        transform: translateY(-12px); // Cambia la traslación hacia arriba a 12px
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    82% {
+        transform: translateY(-6px); // Cambia la traslación hacia arriba a 6px
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    93% {
+        transform: translateY(-4px); // Cambia la traslación hacia arriba a 4px
+        animation-timing-function: ease-in; // Aplica una función de tiempo de animación 'ease-in'
+    }
+    25%, 55%, 75%, 87% {
+        transform: translateY(0px); // Restablece la traslación a 0px en estos porcentajes de tiempo
+        animation-timing-function: ease-out; // Aplica una función de tiempo de animación 'ease-out'
+    }
+    100% {
+        transform: translateY(0px); // Restablece la traslación a 0px
+        animation-timing-function: ease-out; // Aplica una función de tiempo de animación 'ease-out'
+        opacity: 1;
+    }
+  }

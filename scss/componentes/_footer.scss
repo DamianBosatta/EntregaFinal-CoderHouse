@@ -1,53 +1,51 @@
 footer {
-  color: $text-color;
-  @extend %center-text;
-  padding-bottom: 0;
-  padding-top: 5px;
-  margin-top: auto; // Esto empuja el footer al final de la página
-  width: 100%;
-  background-color: $primary-color; // Asegurar el color inicial del fondo
-
+  color: $text-color; // Establece el color del texto del footer utilizando una variable de color
+  @extend %center-text; // Extiende un placeholder que centra el texto
+  padding-bottom: 0; // Elimina el padding inferior
+  padding-top: 5px; // Agrega un padding superior de 5px
+  margin-top: auto; // Empuja el footer al final de la página
+  width: 100%; // Asegura que el footer tenga un ancho del 100%
+  background-color: $primary-color; // Establece el color de fondo inicial usando una variable de color
 
   &.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Añade una sombra al texto para dar un efecto de profundidad
   }
   
   @keyframes colorTransition {
     0% {
-      background-color: $primary-color;
+      background-color: $primary-color; // Color de fondo al inicio de la animación
     }
     50% {
-      background-color: $secondary-color; 
+      background-color: $secondary-color; // Color de fondo a mitad de la animación
     }
     100% {
-      background-color: $primary-color;
+      background-color: $primary-color; // Color de fondo al final de la animación
     }
   }
-  // Añadir animación de transición de colores
+  // Añade una animación de transición de colores al fondo del footer
   &.footer-animated {
-    animation: colorTransition 3s infinite !important;
+    animation: colorTransition 3s infinite !important; // Aplica la animación de transición de color con duración de 3 segundos en bucle infinito
   }
 
   nav {
     ul {
-      @extend %no-margin-padding;
-      list-style-type: none;
+      @extend %no-margin-padding; // Extiende un placeholder que elimina los márgenes y el padding
+      list-style-type: none; // Elimina el estilo de lista por defecto
 
       li {
-        display: inline;
-        margin: 0 10px;
+        display: inline; // Hace que los elementos de la lista se alineen en línea
+        margin: 0 10px; // Agrega un margen horizontal de 10px a cada elemento de la lista
 
         a {
-          text-decoration: none;
+          text-decoration: none; // Elimina la subrayado de los enlaces
           
-
           img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s ease-in-out;
+            width: 30px; // Establece el ancho de las imágenes
+            height: 30px; // Establece la altura de las imágenes
+            transition: transform 0.3s ease-in-out; // Añade una transición suave al transform
 
             &:hover {
-              transform: scale(1.1);
+              transform: scale(1.1); // Aumenta ligeramente el tamaño de la imagen al pasar el mouse
             }
           }
         }
@@ -56,6 +54,6 @@ footer {
   }
 
   p {
-    @extend %center-text;
+    @extend %center-text; // Extiende un placeholder que centra el texto
   }
 }
