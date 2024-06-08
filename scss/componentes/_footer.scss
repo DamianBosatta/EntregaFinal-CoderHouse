@@ -10,22 +10,10 @@ footer {
   &.text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Añade una sombra al texto para dar un efecto de profundidad
   }
-  
-  @keyframes colorTransition {
-    0% {
-      background-color: $primary-color; // Color de fondo al inicio de la animación
+    // Añade una animación de transición de colores al fondo del footer
+    &.footer-animated {
+      animation: colorTransition 3s infinite !important; // Aplica la animación de transición de color con duración de 3 segundos en bucle infinito
     }
-    50% {
-      background-color: $secondary-color; // Color de fondo a mitad de la animación
-    }
-    100% {
-      background-color: $primary-color; // Color de fondo al final de la animación
-    }
-  }
-  // Añade una animación de transición de colores al fondo del footer
-  &.footer-animated {
-    animation: colorTransition 3s infinite !important; // Aplica la animación de transición de color con duración de 3 segundos en bucle infinito
-  }
 
   nav {
     ul {

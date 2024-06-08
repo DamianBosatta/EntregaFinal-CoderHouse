@@ -59,49 +59,6 @@ main {
   outline: none;
 }
 
-header .navbar-nav .nav-link {
-  transition: transform 0.3s ease, color 0.3s ease;
-  color: #2b2a2a;
-}
-header .navbar-nav .nav-link:hover {
-  transform: scale(1.1) rotate(5deg);
-  color: black;
-}
-header .navbar-collapse {
-  transition: transform 0.3s ease;
-  transform: translateX(0);
-}
-header .navbar-collapse:hover {
-  transform: translateX(10px);
-}
-header .navbar-brand img {
-  transition: transform 0.3s ease !important;
-}
-header .navbar-brand img:hover {
-  transform: scale(1.1);
-}
-header .navbar-toggler {
-  transition: transform 0.3s ease;
-}
-header .navbar-toggler:focus {
-  transform: rotate(90deg);
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-header .tracking-in-expand {
-  animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -148,6 +105,207 @@ header .tracking-in-expand {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  text-align: center !important;
+}
+
+.title {
+  grid-column: span 2;
+  text-align: center !important;
+  border: 1px solid #3399ff;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.title:hover {
+  background-color: #3399ff;
+  color: #2b2a2a;
+}
+
+.image {
+  grid-column: span 1;
+}
+
+.course-list {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.course-list ul {
+  flex-grow: 1;
+  border: none;
+  list-style-type: none;
+}
+
+.course-list li {
+  padding: 10px;
+  border-bottom: 1px solid #3399ff !important;
+  transition: background-color 0.3s;
+}
+
+.course-list li:last-child {
+  border-bottom: none;
+}
+
+.course-list li:hover {
+  background-color: #3399ff !important;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #0d74b9;
+}
+
+footer {
+  color: #2b2a2a;
+  padding-bottom: 0;
+  padding-top: 5px;
+  margin-top: auto;
+  width: 100%;
+  background-color: #3399ff;
+}
+footer.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+footer.footer-animated {
+  animation: colorTransition 3s infinite !important;
+}
+footer nav ul {
+  list-style-type: none;
+}
+footer nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+footer nav ul li a {
+  text-decoration: none;
+}
+footer nav ul li a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+footer nav ul li a img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 575.98px) {
+  /* Cuando el ancho de la pantalla es menor o igual a 575.98px */
+  .navbar-nav {
+    flex-direction: column; /* Los elementos dentro de .navbar-nav se organizan en una columna */
+    text-align: center; /* El texto se alinea al centro */
+    /* Estilo para .nav-item */
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 10px; /* Los elementos .nav-item tienen un margen inferior de 10px */
+  }
+}
+@media (min-width: 576px) {
+  /* Cuando el ancho de la pantalla es mayor o igual a 576px */
+  .navbar-nav {
+    flex-direction: row; /* Los elementos dentro de .navbar-nav se organizan en una fila */
+    text-align: left; /* El texto se alinea a la izquierda */
+    /* Estilo para .nav-item */
+  }
+  .navbar-nav .nav-item {
+    margin-right: 10px; /* Los elementos .nav-item tienen un margen derecho de 10px */
+  }
+}
+@media (max-width: 991.98px) {
+  /* Cuando el ancho de la pantalla es menor o igual a 991.98px */
+  .navbar-brand img {
+    max-width: 30px; /* El ancho máximo de la imagen dentro de .navbar-brand se ajusta según $navbar-brand-img-max-width-small */
+  }
+}
+@media (max-width: 767.98px) {
+  /* Cuando el ancho de la pantalla es menor o igual a 767.98px */
+  .text-bg-primary {
+    font-size: 1.2rem; /* El tamaño de fuente de elementos con la clase .text-bg-primary se ajusta a 1.2rem */
+  }
+  .h3 {
+    margin-bottom: 10px; /* Los elementos .h3 tienen un margen inferior de 10px */
+  }
+  .lead {
+    margin-bottom: 20px; /* Los elementos .lead tienen un margen inferior de 20px */
+    line-height: 1.5; /* La altura de línea se establece en 1.5 */
+  }
+  .content {
+    grid-template-columns: 1fr; /* La disposición de los elementos dentro de .content se cambia a una sola columna */
+  }
+  .title, .image, .course-list {
+    grid-column: span 1; /* Los elementos .title, .image y .course-list abarcan una sola columna */
+  }
+}
+@media (max-width: 991.98px) {
+  /* Cuando el ancho de la pantalla es menor o igual a 991.98px */
+  .navbar-brand img {
+    max-width: 30px; /* El ancho máximo de la imagen dentro de .navbar-brand se ajusta a 30px para reducir su tamaño en pantallas pequeñas si es necesario */
+  }
+}
+@keyframes colorTransition {
+  0% {
+    background-color: #3399ff;
+  }
+  50% {
+    background-color: #0d74b9;
+  }
+  100% {
+    background-color: #3399ff;
+  }
+}
+.navbar-brand img {
+  transition: transform 0.3s ease !important;
+}
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+header .navbar-nav .nav-link {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #2b2a2a;
+}
+header .navbar-nav .nav-link:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: black;
+}
+header .navbar-collapse {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+header .navbar-collapse:hover {
+  transform: translateX(10px);
+}
+header .navbar-toggler {
+  transition: transform 0.3s ease;
+}
+header .navbar-toggler:focus {
+  transform: rotate(90deg);
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header .tracking-in-expand {
+  animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 .bounce-top {
@@ -239,161 +397,33 @@ header .tracking-in-expand {
     opacity: 1;
   }
 }
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
-  padding: 20px;
-  text-align: center !important;
+.slide-in-tl {
+  -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-tl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.title {
-  grid-column: span 2;
-  text-align: center !important;
-  border: 1px solid #3399ff;
-  padding: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.title:hover {
-  background-color: #3399ff;
-  color: #2b2a2a;
-}
-
-.image {
-  grid-column: span 1;
-}
-
-.course-list {
-  grid-column: span 1;
-  display: flex;
-  flex-direction: column;
-  color: #ffffff;
-}
-
-.course-list ul {
-  flex-grow: 1;
-  border: none;
-  list-style-type: none;
-}
-
-.course-list li {
-  padding: 10px;
-  border-bottom: 1px solid #3399ff !important;
-  transition: background-color 0.3s;
-}
-
-.course-list li:last-child {
-  border-bottom: none;
-}
-
-.course-list li:hover {
-  background-color: #3399ff !important;
-}
-
-.image img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #0d74b9;
-}
-
-footer {
-  color: #2b2a2a;
-  padding-bottom: 0;
-  padding-top: 5px;
-  margin-top: auto;
-  width: 100%;
-  background-color: #3399ff;
-}
-footer.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-@keyframes colorTransition {
+@-webkit-keyframes slide-in-tl {
   0% {
-    background-color: #3399ff;
-  }
-  50% {
-    background-color: #0d74b9;
+    -webkit-transform: translateY(-1000px) translateX(-1000px);
+    transform: translateY(-1000px) translateX(-1000px);
+    opacity: 0;
   }
   100% {
-    background-color: #3399ff;
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1;
   }
 }
-footer.footer-animated {
-  animation: colorTransition 3s infinite !important;
-}
-footer nav ul {
-  list-style-type: none;
-}
-footer nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-footer nav ul li a {
-  text-decoration: none;
-}
-footer nav ul li a img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease-in-out;
-}
-footer nav ul li a img:hover {
-  transform: scale(1.1);
-}
-@media (max-width: 575.98px) {
-  /* Cuando el ancho de la pantalla es menor o igual a 575.98px */
-  .navbar-nav {
-    flex-direction: column; /* Los elementos dentro de .navbar-nav se organizan en una columna */
-    text-align: center; /* El texto se alinea al centro */
-    /* Estilo para .nav-item */
+@keyframes slide-in-tl {
+  0% {
+    -webkit-transform: translateY(-1000px) translateX(-1000px);
+    transform: translateY(-1000px) translateX(-1000px);
+    opacity: 0;
   }
-  .navbar-nav .nav-item {
-    margin-bottom: 10px; /* Los elementos .nav-item tienen un margen inferior de 10px */
-  }
-}
-@media (min-width: 576px) {
-  /* Cuando el ancho de la pantalla es mayor o igual a 576px */
-  .navbar-nav {
-    flex-direction: row; /* Los elementos dentro de .navbar-nav se organizan en una fila */
-    text-align: left; /* El texto se alinea a la izquierda */
-    /* Estilo para .nav-item */
-  }
-  .navbar-nav .nav-item {
-    margin-right: 10px; /* Los elementos .nav-item tienen un margen derecho de 10px */
-  }
-}
-@media (max-width: 991.98px) {
-  /* Cuando el ancho de la pantalla es menor o igual a 991.98px */
-  .navbar-brand img {
-    max-width: 30px; /* El ancho máximo de la imagen dentro de .navbar-brand se ajusta según $navbar-brand-img-max-width-small */
-  }
-}
-@media (max-width: 767.98px) {
-  /* Cuando el ancho de la pantalla es menor o igual a 767.98px */
-  .text-bg-primary {
-    font-size: 1.2rem; /* El tamaño de fuente de elementos con la clase .text-bg-primary se ajusta a 1.2rem */
-  }
-  .h3 {
-    margin-bottom: 10px; /* Los elementos .h3 tienen un margen inferior de 10px */
-  }
-  .lead {
-    margin-bottom: 20px; /* Los elementos .lead tienen un margen inferior de 20px */
-    line-height: 1.5; /* La altura de línea se establece en 1.5 */
-  }
-  .content {
-    grid-template-columns: 1fr; /* La disposición de los elementos dentro de .content se cambia a una sola columna */
-  }
-  .title, .image, .course-list {
-    grid-column: span 1; /* Los elementos .title, .image y .course-list abarcan una sola columna */
-  }
-}
-@media (max-width: 991.98px) {
-  /* Cuando el ancho de la pantalla es menor o igual a 991.98px */
-  .navbar-brand img {
-    max-width: 30px; /* El ancho máximo de la imagen dentro de .navbar-brand se ajusta a 30px para reducir su tamaño en pantallas pequeñas si es necesario */
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1;
   }
 }
 
